@@ -27,7 +27,6 @@ class Graph:
 		for i in [j for j in self.Nodes[node] if not j in visited]:
 			self.__visit(i, visited)
 
-
 	def isConnected(self):
 		visited = set([])
 		self.__nodes = list(self.Nodes.keys())
@@ -36,3 +35,9 @@ class Graph:
 			return True
 		return False
 
+
+a = Graph()
+a.addEdge(0,1)
+a.addEdge(1,1)
+print a.isConnected()
+a.removeedge(0,2001)
